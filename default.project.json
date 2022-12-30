@@ -1,0 +1,56 @@
+{
+	"name": "Node-Pathfiner",
+	"tree": {
+		"$className": "DataModel",
+
+		"ReplicatedStorage": {
+			"$path": "src/DataModel/ReplicatedStorage",
+			"$ignoreUnknownInstances": true,
+
+			"Storage": {
+				"$className": "Folder",
+				"$path": "src/ReplicatedStorage"
+			}
+		},
+
+		"Workspace": {
+			"$className": "Workspace",
+			"$ignoreUnknownInstances": true,
+			
+			"Points": {
+				"$className": "Folder",
+				"$ignoreUnknownInstances": true
+			}
+		},
+
+		"ServerStorage": {
+			"$className": "ServerStorage",
+			"$ignoreUnknownInstances": true,
+
+			"Storage": {
+				"$className": "Folder",
+				"$path": "src/ServerStorage"
+			}
+		},
+
+		"ServerScriptService": {
+			"$className": "ServerScriptService",
+
+			"ServerScripts": {
+				"$path": "src/ServerScriptService"
+			}
+		},
+		
+		"StarterPlayer": {
+			"$className": "StarterPlayer",
+
+			"StarterPlayerScripts": {
+				"$className": "StarterPlayerScripts",
+
+				"ClientScripts": {
+					"$path": "src/StarterPlayerScripts"
+				}
+			}
+		}
+	}
+}

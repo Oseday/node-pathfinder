@@ -1,0 +1,6 @@
+{
+	"luau-lsp.sourcemap.rojoProjectFile": "default.project.json",
+	"robloxLsp.diagnostics.disable": [
+		"trailing-space"
+	]
+}
