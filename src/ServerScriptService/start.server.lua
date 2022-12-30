@@ -9,7 +9,7 @@ local weightsArray: {number} = {}
 
 for i, point in ipairs(points) do
 	pointsArray[i] = point.Position
-	weightsArray[i] = point:GetAttribute("Weight") or 1
+	weightsArray[i] = point:GetAttribute("Weight") or math.random()*5
 end
 
 local RayParams = RaycastParams.new()
@@ -35,6 +35,8 @@ for i, node in ipairs(nodes) do
 		line.CanCollide = false
 		line.Size = Vector3.new(0.1, 0.1, segment.m)
 		line.CFrame = CFrame.new(pointA, pointB) * CFrame.new(0, 0, -line.Size.Z / 2)
+		local weight = 1 - segment.w/segment.m/5
+		line.Color = Color3.fromHSV(weight, 1, 1)
 		line.Parent = workspace
 	end
 end
@@ -72,9 +74,9 @@ if start and goal then
 			local line = Instance.new("Part", folder)
 			line.Anchored = true
 			line.CanCollide = false
-			line.Size = Vector3.new(0.4, 0.4, (pointA - pointB).Magnitude)
+			line.Size = Vector3.new(1.0, 1.0, (pointA - pointB).Magnitude)
 			line.CFrame = CFrame.new(pointB, pointA) * CFrame.new(0, 0, -line.Size.Z / 2) + Vector3.new(0, 1, 0)
-			line.Color = Color3.fromRGB(0, 0, 255)
+			line.Color = Color3.fromRGB(0, 0, 0)
 			line.Parent = folder
 		end
 
