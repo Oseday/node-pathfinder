@@ -83,7 +83,6 @@ ParallelWorker.__index = ParallelWorker
 local Dispatch = {}
 Dispatch.__index = Dispatch
 
-local HttpService = game:GetService("HttpService")
 local RunService = game:GetService("RunService")
 
 if not RunService:IsRunning() then
